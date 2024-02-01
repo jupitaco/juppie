@@ -20,7 +20,9 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  background: url('../images/juppiBG.png') top center;
+  background: url('../images/juppiBG.png') top center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 button {
