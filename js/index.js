@@ -18,17 +18,28 @@
 const openNavIcon = document.querySelector('.nav-icon');
 const closeNavIcon = document.querySelector('.close');
 const toggleNavBar = document.querySelector('.close-navbar');
-const navList = document.querySelectorAll('.nav-list');
-const body = document.querySelector('body');
+const purrAddressBtn = document.querySelectorAll('#purrAddressBtn');
 
 // Navbar functions
 const handleClick = () => {
   toggleNavBar.classList.toggle('open-navbar');
 };
 
+const handlePurAddress = () => {
+  purrAddressBtn.forEach((btn) => {
+    btn.classList.add('purrAddress');
+  });
+
+  // remove the class immediately
+  setTimeout(() => {
+    purrAddressBtn.forEach((btn) => {
+      btn.classList.remove('purrAddress');
+    });
+  }, 700);
+};
+
+purrAddressBtn.forEach((btn) => {
+  btn.addEventListener('click', handlePurAddress);
+});
 openNavIcon.addEventListener('click', handleClick);
 closeNavIcon.addEventListener('click', handleClick);
-
-navList.forEach((navItem) => {
-  navItem.addEventListener('click', handleClick);
-});

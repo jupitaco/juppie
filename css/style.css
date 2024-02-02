@@ -82,6 +82,34 @@ h3 {
   font-weight: 500;
 }
 
+.action button {
+  width: 50%;
+  margin-top: 0.8em;
+}
+
+.purrAddress {
+  animation: spinIt 0.7s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes spinIt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  70% {
+    transform: rotate(-40deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 /* ====== HEADER START ==== */
 
 header {
@@ -92,9 +120,9 @@ header {
   margin: 1em auto;
 }
 
-/* header .logo {
-  width: 30%;
-} */
+header .logo {
+  width: 85%;
+}
 
 header .logo img {
   width: 224px;
@@ -107,6 +135,10 @@ header .action {
   justify-content: flex-end;
 }
 
+header .action button {
+  width: 50%;
+}
+
 .close-navbar {
   display: flex;
   flex-direction: column;
@@ -116,9 +148,10 @@ header .action {
   height: 100vh;
   left: 800px;
   top: 0;
-  background: var(--black);
+  background: linear-gradient(110.67deg, #5fc0a1 -7.23%, #c0f188 94.73%);
   align-items: end;
   transition: all 1s ease-in-out;
+  z-index: 20;
 }
 
 .open-navbar {
@@ -162,9 +195,10 @@ header .action {
 .connect .socialBtn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px;
 }
-
+/*
 .connect .social {
   display: flex;
   align-items: center;
@@ -177,10 +211,12 @@ header .action {
   background: #0e5b5f url('../images/btnOutline.png') center center no-repeat;
   background-size: 100% 100%;
 }
+*/
 
-.connect .social img {
-  width: 16px;
-  height: 16px;
+footer .connect .social {
+  width: 40%;
+
+  /* margin: 0 auto; */
 }
 
 @media screen and (min-width: 768px) {
@@ -247,12 +283,17 @@ li {
   display: none;
 }
 
-.reward .btn,
+/* .reward .btn,
 .hero .btn {
   padding: 8px 16px 8px 16px;
   border-radius: 12px;
   background: #0e5b5f url('../images/btnOutline.png') center center no-repeat;
   background-size: 100% 100%;
+} */
+
+.reee .action {
+  display: flex;
+  justify-content: center;
 }
 
 /* ===why=== */
@@ -297,6 +338,10 @@ li div {
   padding: 1em 2em;
 }
 
+li div {
+  min-height: 128px;
+}
+
 .share div {
   padding: 1em 1.5em;
 }
@@ -324,6 +369,11 @@ footer .connect .socialBtn {
   h3,
   h5 {
     text-align: start;
+  }
+
+  .action button {
+    width: 30%;
+    margin-top: 0.8em;
   }
 
   .btn {
@@ -416,5 +466,14 @@ footer .connect .socialBtn {
   .hero .action {
     display: flex;
     justify-content: flex-start;
+  }
+
+  .reee .action {
+    margin-top: 0.8em;
+  }
+
+  .reee .action button {
+    width: 19%;
+    margin-top: 0.8em;
   }
 }
